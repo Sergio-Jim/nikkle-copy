@@ -48,30 +48,26 @@
 
 // export default Sidebar;
 
-
 import appRoutes from "../../routes/appRoutes";
 import SidebarItem from "./SidebarItem";
 import SidebarItemCollapse from "./SidebarItemCollapse";
 
 const Sidebar = () => {
   return (
-    <div className= "flex h-full bg-yellow text-white">
+    <div className="flex h-full bg-yellow text-white">
       <div className="w-[300px] flex-shrink-0 border-r border-transparent">
         <div className="p-4">
-          <div className="mb-8">
-            <img src="" alt="Logo" className="w-20 mx-auto" />
-          </div>
           <nav>
             <ul>
-              {appRoutes.map((route, index) => (
-                route.sidebarProps && (
-                  route.child ? (
+              {appRoutes.map(
+                (route, index) =>
+                  route.sidebarProps &&
+                  (route.child ? (
                     <SidebarItemCollapse item={route} key={index} />
                   ) : (
                     <SidebarItem item={route} key={index} />
-                  )
-                )
-              ))}
+                  ))
+              )}
             </ul>
           </nav>
         </div>

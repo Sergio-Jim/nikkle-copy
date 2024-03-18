@@ -1,39 +1,63 @@
 import DashboardPage from "../pages/dashboard/DashboardPage";
 import SalesPageLayout from "../pages/sales/SalesPageLayout";
 import { RouteType } from "./config";
-import homeIcon from "../assets/images/dashboard-list-item.svg";
-import salesIcon from "../assets/images/sales-list-item.svg";
+import HomeIcon from "../assets/images/dashboard.svg";
+import SalesIcon from "../assets/images/sales.svg";
 import CustomersPage from "../pages/sales/CustomersPage";
 
 const appRoutes: RouteType[] = [
-    {
-        index: true,
-        element: <DashboardPage/>,
-        state: "dashboard",
-        sidebarProps: {
-            displayText: "Sales",
-            icon: homeIcon,
-        }
+  {
+    index: true,
+    element: <DashboardPage />,
+    state: "dashboard",
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardPage />,
+    state: "dashboard",
+    sidebarProps: {
+      displayText: "Dashboard",
+      icon: <img src={HomeIcon} alt="Dashboard" />,
     },
-    {
-        path: "/sales",
-        element: <SalesPageLayout/>,
-        state: "sales",
+  },
+  {
+    path: "/sales",
+    element: <SalesPageLayout />,
+    state: "sales",
+    sidebarProps: {
+      displayText: "Sales",
+      icon: <img src={SalesIcon} alt="Dashboard" />,
+    },
+    child: [
+      {
+        path: "/sales/customers",
+        element: <CustomersPage />,
+        state: "sales.customers",
         sidebarProps: {
-            displayText: "Sales",
-            icon: salesIcon,
+          displayText: "Customers",
         },
-        child: [
-            {
-                path: "/sales/customers",
-                element: <CustomersPage/>,
-                state: "sales.customers",
-                sidebarProps: {
-                    displayText: "Customers"
-                }
-            }
-        ]
-    }
+      },
+    ],
+  },
+  {
+    path: "/sales",
+    element: <SalesPageLayout />,
+    state: "sales",
+    sidebarProps: {
+      displayText: "SomethingNew",
+      icon: <img src={SalesIcon} alt="Dashboard" />,
+    },
+    child: [
+      {
+        path: "/sales/customers",
+        element: <CustomersPage />,
+        state: "sales.customers",
+        sidebarProps: {
+          displayText: "Customers",
+        },
+      },
+    ],
+  },
 ];
 
 export default appRoutes;

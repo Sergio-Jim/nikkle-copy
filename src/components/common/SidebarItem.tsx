@@ -55,14 +55,18 @@ const SidebarItem = ({ item }: Props) => {
     <Link
       to={item.path}
       className={`block py-3 px-6 ${
-        appState === item.state ? "bg-blue-500 text-white" : "text-gray-900 bg-transparent"
+        appState === item.state
+          ? "bg-blue-500 text-white"
+          : "text-gray-900 bg-transparent"
       } hover:bg-blue-600`}
     >
       <div className="flex items-center">
         {item.sidebarProps.icon && (
           <div className="mr-3">{item.sidebarProps.icon}</div>
         )}
-        <span className={appState === item.state ? "text-white" : "text-gray-900"}>
+        <span
+          className={appState === item.state ? "text-white" : "text-gray-900"}
+        >
           {item.sidebarProps.displayText}
         </span>
       </div>
