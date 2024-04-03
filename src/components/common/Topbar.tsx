@@ -1,12 +1,16 @@
 import logo from "../../assets/images/logo.svg";
+import search from "../../assets/images/icon-search.svg";
+import settings from "../../assets/images/icon-settings.svg";
+import iconDown from "../../assets/images/icon-arrow-down.svg";
+import thumbnail from "../../assets/images/thumbnail-icon.svg";
 
 const Topbar = () => {
   return (
     <>
-      <div className="flex md:py-[25px] py-[15px] pb-[12px] px-[23px] md:px-[40px] items-center w-full fixed">
+      <div className="flex md:py-[25px] py-[15px] pb-[12px] px-[23px] md:px-[40px] items-center w-full">
         <div className="lg:w-[155px]">
           <a className="hidden md:block" href="./index.php">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="" />
           </a>
           <button className="mobile-menu-btn md:hidden">
             <svg
@@ -36,11 +40,11 @@ const Topbar = () => {
               placeholder="Search"
             />
             <button>
-              <img src="./img/icon-search.svg" alt="" />
+              <img src={search} alt="" />
             </button>
           </form>
           <button className="block lg:hidden mr-[22px]">
-            <img src="./img/icon-search.svg" alt="" />
+            <img src={search} alt="" />
           </button>
         </div>
         <div className="flex items-center justify-center">
@@ -48,54 +52,41 @@ const Topbar = () => {
             href="./settings.php"
             className="mr-[22px] lg:mr-[37px] w-[37px] h-[37px] bg-[#F0F6F9] hover:bg-[#408FEF]/20 rounded-[10px] flex items-center justify-center"
           >
-            <img src="./img/icon-settings.svg" alt="icon-settings" />
+            <img src={settings} alt="" />
           </a>
           <button className="flex text-sm text-[#3E3E3E] items-center relative thumbnail-btn">
             <div className="thumbnail-btn-inner border-[3px] border-transparent lg:mr-[17px] bg-[#B8C9D4] rounded-full w-[53px] text-white text-sm font-bold h-[53px] flex items-center justify-center">
               NK
             </div>
             <span className="hidden lg:inline">Username</span>
-            <img
-              className="hidden lg:inline ml-[15px]"
-              src="./img/icon-arrow-down.svg"
-              alt=""
-            />
+            <img className="hidden lg:inline ml-[15px]" src={iconDown} alt="" />
 
             <div className="thumbnail-menu min-w-[280px] lg:min-w-[483px] absolute bg-[#F0F6F9] p-[12px] pb-[25px] rounded-[20px] button-shadow top-[70px] right-0 z-10 hidden">
               <div className="rounded-[15px] py-[16px] px-[19px] bg-white">
-                <a
-                  href="www"
-                  className="text-[#3E3E3E] font-semibold text-[16px] leading-[24px] mb-[30px] block"
-                >
+                <a href="/" className="text-[#3E3E3E] font-semibold text-[16px] leading-[24px] mb-[30px] block">
                   <div className="flex items-center w-max">
                     <img
-                      src="./img/thumbnail-icon.svg"
+                      src={thumbnail}
                       className="w-[53px] h-[53px] mr-[23px]"
-                      alt="thubnail-icon"
+                      alt=""
                     />
                     Username 1
                   </div>
                 </a>
-                <a
-                  href="www"
-                  className="text-[#3E3E3E] font-semibold text-[16px] leading-[24px] mb-[29px] block"
-                >
+                <a href="/" className="text-[#3E3E3E] font-semibold text-[16px] leading-[24px] mb-[29px] block">
                   <div className="flex items-center w-max">
                     <img
-                      src="./img/thumbnail-icon.svg"
+                      src={thumbnail}
                       className="w-[30px] h-[30px] ml-[11.5px] mr-[34.5px]"
                       alt=""
                     />
                     Username 2
                   </div>
                 </a>
-                <a
-                  href="www"
-                  className="text-[#3E3E3E] font-semibold text-[16px] leading-[24px] block"
-                >
+                <a href="/" className="text-[#3E3E3E] font-semibold text-[16px] leading-[24px] block">
                   <div className="flex items-center w-max">
                     <img
-                      src="./img/thumbnail-icon.svg"
+                      src={thumbnail}
                       className="w-[30px] h-[30px] ml-[11.5px] mr-[34.5px]"
                       alt=""
                     />
@@ -104,10 +95,7 @@ const Topbar = () => {
                 </a>
               </div>
 
-              <a
-                href="www"
-                className="text-[#3E3E3E] font-semibold text-[14px] leading-[21px] mt-[22.5px] block"
-              >
+              <a href="/" className="text-[#3E3E3E] font-semibold text-[14px] leading-[21px] mt-[22.5px] block">
                 <div className="flex items-center w-max">
                   <svg
                     className="w-[30px] h-[30px] ml-[20px] mr-[46.5px]"
