@@ -5,15 +5,15 @@ import Topbar from "../common/Topbar";
 const MainLayout = () => {
   return (
     <>
-      <div className="flex-col h-lvh">
-        <div className="flex h-[15%]">
+      <div className="flex flex-col h-screen">
+        <div className="top-0 w-full z-10">
           <Topbar />
         </div>
-        <div className="flex h-[85%]">
-          <div className="flex w-64 bg-red-800">
+        <div className="flex flex-grow">
+          <div className="flex flex-shrink-0 w-64">
             <Sidebar />
           </div>
-          <div className="flex flex-grow bg-blue-800">
+          <div className="flex flex-col flex-grow overflow-y-auto m-6">
             <Outlet />
           </div>
         </div>

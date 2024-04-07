@@ -3,7 +3,8 @@ import SalesPageLayout from "../pages/sales/SalesPageLayout";
 import { RouteType } from "./config";
 import HomeIcon from "../assets/images/dashboard.svg";
 import SalesIcon from "../assets/images/sales.svg";
-import CustomersPage from "../pages/sales/CustomersPage";
+import CustomersPage from "../pages/sales/customers/CustomersPage";
+import AddCustomerPage from "../pages/sales/customers/AddCustomerPage";
 
 const appRoutes: RouteType[] = [
   {
@@ -55,6 +56,11 @@ const appRoutes: RouteType[] = [
         sidebarProps: {
           displayText: "Customers",
         },
+      },
+      {
+        path: "/sales/customers/addcustomer",
+        element: <AddCustomerPage />,
+        state: "sales.addcustomer",
       },
     ],
   },

@@ -54,7 +54,7 @@ import SidebarItemCollapse from "./SidebarItemCollapse";
 
 const Sidebar = () => {
   return (
-    <div className="flex h-full bg-yellow text-white">
+    <div className="flex h-full text-black">
       <div className="w-[300px] flex-shrink-0 border-r border-transparent">
         <div className="p-4">
           <nav>
